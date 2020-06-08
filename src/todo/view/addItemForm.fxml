@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="800.0" style="-fx-background-color: #d32f2f;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="todo.controller.AddItemForm">
+   <children>
+      <AnchorPane layoutY="130.0" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: WHITE;">
+         <children>
+            <JFXTextField fx:id="task" focusColor="#9a0007" layoutX="152.0" layoutY="141.0" prefHeight="28.0" prefWidth="502.0" promptText="Task" unFocusColor="#424242">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <JFXButton fx:id="submit" layoutX="285.0" layoutY="339.0" prefHeight="37.0" prefWidth="245.0" style="-fx-background-color: #424242;" text="Save task" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font></JFXButton>
+            <Label alignment="CENTER" layoutX="152.0" layoutY="71.0" prefHeight="31.0" prefWidth="502.0" text="Add a new task">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+            <JFXTextArea fx:id="description" focusColor="#9a0007" layoutX="152.0" layoutY="190.0" prefHeight="123.0" prefWidth="502.0" promptText="Enter a description" unFocusColor="#424242">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextArea>
+            <ImageView fitHeight="51.0" fitWidth="66.0" layoutX="505.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/baseline_edit_black_48dp.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="251.0" layoutY="45.0" prefHeight="41.0" prefWidth="298.0" text="Todo App" textFill="WHITE">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="backButton" alignment="CENTER" layoutX="21.0" layoutY="50.0" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: #9a0007;" text="Back" textFill="WHITE" />
+      <Label fx:id="flashMsg" alignment="CENTER" layoutX="197.0" layoutY="150.0" prefHeight="31.0" prefWidth="419.0" style="-fx-background-color: #f8d7da; -fx-border-style: solid; -fx-border-color: #f5c6cb;" textFill="#721c24" visible="false" />
+      <HBox layoutX="629.0" layoutY="27.0" prefHeight="24.0" prefWidth="167.0">
+         <children>
+            <Label fx:id="userLog" alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="118.0" text="User" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="47.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/baseline_account_circle_black_48dp.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox fx:id="logout" layoutX="642.0" layoutY="67.0" prefHeight="3.0" prefWidth="141.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="117.0" text="Logout" textFill="#6b0b10">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="31.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/baseline_highlight_off_black_48dp.png" />
+               </image>
+            </ImageView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+   </children>
+</AnchorPane>
